@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios1 from "../axios.js";
+import axios from "../axios.js";
 import "./Row.css";
 
 const base_URL = "https://image.tmdb.org/t/p/original/";
@@ -8,7 +8,7 @@ function Row({ title, fetchURL, isLargerow }) {
   useEffect(() => {
     async function fetchDate() {
       try {
-        const request = await axios1.get(fetchURL);
+        const request = await axios.get(fetchURL);
         setMovies(request.data.results);
       } catch (error) {
         console.log(error);
