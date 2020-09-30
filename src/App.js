@@ -1,8 +1,9 @@
 import React from "react";
+import requests from "./requests";
 import "./App.css";
 import Row from "./components/Row.js";
 import Banner from "./components/Banner.js";
-import requests from "./requests";
+import Nav from "./components/Nav.js";
 
 function App() {
   const {
@@ -18,6 +19,7 @@ function App() {
   // console.log(fetchNetflixOriginals);
   return (
     <div className="app">
+      <Nav />
       <Banner />
       <Row
         title="NETFLIX ORIGINALS"
